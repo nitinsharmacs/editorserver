@@ -29,7 +29,7 @@ exports.cpp = (envData, code, input, cb) => {
 				command = 'g++ '+filepath+' -o '+objectCodeFilePath+'.exe';
 			}
 			if(envData.OS === 'linux' && envData.cmd === 'gcc'){
-				command = 'gcc '+filepath+' -o '+objectCodeFilePath;
+				command = 'gcc '+filepath+' -lstdc++ -o '+objectCodeFilePath;
 			}
 
 			exec(command, (err, stdout, stderr)=>{
