@@ -12,7 +12,7 @@ const lang = {
 	python:{compiler:compilers.compilePython}
 };
 
-server.use(bodyParser.json());
+
 
 server.use((req, res, next)=>{
 	res.setHeader('Access-Control-Allow-Origin', '*');
@@ -23,6 +23,8 @@ server.use((req, res, next)=>{
 	}
 	next()
 });
+
+server.use(bodyParser.json());
 
 
 server.post('/compile/:lang', (req, res, next)=> {
