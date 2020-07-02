@@ -31,6 +31,7 @@ exports.cpp = (envData, code, input, cb) => {
 			if(envData.OS === 'linux' && envData.cmd === 'g++'){
 				command = 'g++ '+filepath+' -o '+objectCodeFilePath;
 			}
+			console.log(command)
 			exec(command, (err, stdout, stderr)=>{
 				if(err){
 					return cb({output:stderr});
