@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const fs = require('fs');
 const compilers = require('./compilers/compilers');
-const cors = require('cors');
+//const cors = require('cors')
 const server = express();
 
 const option = {init:true};
@@ -15,17 +15,17 @@ const lang = {
 
 
 
-// server.use((req, res, next)=>{
-// 	res.setHeader('Access-Control-Allow-Origin', '*');
-// 	res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, PETCH, DELETE, OPTIONS');
-// 	res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
-// 	if(req.method == 'OPTIONS'){
-// 		return res.sendStatus(200);
-// 	}
-// 	next();
-// });
+server.use((req, res, next)=>{
+	res.setHeader('Access-Control-Allow-Origin', '*');
+	res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, PETCH, DELETE, OPTIONS');
+	res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+	if(req.method == 'OPTIONS'){
+		return res.sendStatus(200);
+	}
+	next();
+});
 
-server.use(cors());
+//server.use(cors());
 
 server.use(bodyParser.json());
 
