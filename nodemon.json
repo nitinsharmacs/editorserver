@@ -1,0 +1,7 @@
+{
+	"env":{
+		"OS":"linux",
+		"CMD":"g++",
+		"MODE":"dev"
+	}
+}
