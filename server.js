@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const fs = require('fs');
 const compilers = require('./compilers/compilers');
+const cors = require('cors');
 const server = express();
 
 const option = {init:true};
