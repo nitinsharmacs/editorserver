@@ -4,13 +4,13 @@ const fs = require('fs');
 const compilers = require('./compilers/compilers');
 const server = express();
 
-const option = {init:true};
-compilers.init(option);
+// const option = {init:true};
+// compilers.init(option);
 
-const lang = {
-	cpp:{compiler:compilers.compileCPP},
-	python:{compiler:compilers.compilePython}
-};
+// const lang = {
+// 	cpp:{compiler:compilers.compileCPP},
+// 	python:{compiler:compilers.compilePython}
+// };
 
 server.use(bodyParser.json());
 
