@@ -20,7 +20,6 @@
   "homepage": "https://github.com/nitinsharmacs/editorserver#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
-    "compilex": "^0.7.4",
     "express": "^4.17.1"
   },
   "devDependencies": {
