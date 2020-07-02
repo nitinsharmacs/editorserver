@@ -52,6 +52,6 @@ server.use((req, res)=>{
 	res.send('server is running')
 })
 const port = process.env.PORT || '3001';
-server.listen(3001, ()=>{
+server.listen(port, ()=>{
 	console.log(`Server is running of ${port}`);
 });
